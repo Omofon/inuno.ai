@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1>Your Profile</h1>
+        <!-- Display User Information -->
+        <div class="user-info">
+            <p>
+                <strong>Username:</strong> {{ user.username }}
+            </p>
+            <p>
+                <strong>Email:</strong> {{ user.email }}
+            </p>
+            <p>
+                <strong>First Name:</strong> {{ user.first_name }}
+            </p>
+            <p>
+                <strong>Last Name:</strong> {{ user.last_name }}
+            </p>
+        </div>
+        <hr>
+        <!-- Form for Updating Profile -->
+        <h2>Update Profile</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text"
+                       id="first_name"
+                       name="first_name"
+                       value="{{ user.first_name }}"
+                       class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text"
+                       id="last_name"
+                       name="last_name"
+                       value="{{ user.last_name }}"
+                       class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       value="{{ user.email }}"
+                       class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+        <hr>
+        <!-- Form for Password Reset -->
+        <h2>Reset Password</h2>
+        <div class="password-reset">
+            <form method="get" action="{% url 'accounts:password_reset' %}">
+                <button type="submit" class="btn btn-warning">Reset Password</button>
+            </form>
+        </div>
+        <hr>
+        <!-- Form for Deleting Account -->
+        <h2>Delete Account</h2>
+        <form method="post" action="{% url 'accounts:delete_user' %}">
+            {% csrf_token %}
+            <button type="submit"
+                    class="btn btn-danger"
+                    onclick="return confirm('Are you sure you want to delete your account?');">Delete Account</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,166 @@
+/* Import Google Font for consistent typography */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/* Base reset and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Clean white background */
+  padding: 20px;
+}
+
+/* Form container styling */
+.auth_form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff; /* White form container */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title styling */
+.auth_form h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #202124; /* Google's text color */
+}
+
+/* Options for external authentication (Google, Apple) */
+.auth_option {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.auth_option .option {
+  flex: 1;
+}
+
+.auth_option .option a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #3c4043;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.auth_option .option a:hover {
+  background-color: #f1f3f4;
+  border-color: #c1c7cd;
+}
+
+.auth_form .auth_option .option a img {
+  max-width: 25px;
+}
+
+/* Separator between external options and form */
+.separator {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+.separator span {
+  background-color: #ffffff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #dadce0;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+}
+
+/* Form fields styling */
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #202124;
+}
+
+form input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #dadce0; /* Subtle border */
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #202124;
+  outline: none;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  border-color: #1a73e8; /* Google blue */
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+/* Submit button styling */
+form .btn-primary {
+  width: 100%;
+  height: 45px;
+  background-color: #1a73e8;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form .btn-primary:hover {
+  background-color: #135abe;
+}
+
+/* Sign up/login link styling */
+.sign_up {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.sign_up a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sign_up a:hover {
+  text-decoration: underline;
+}

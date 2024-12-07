@@ -1,0 +1,51 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {% block title %}
+                {{ title }} | Inuno.AI
+            {% endblock title %}
+        </title>
+        <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+    </head>
+    <body>
+        <div class="auth_form">
+            <!-- Sign-up form container -->
+            <form action="{% url 'accounts:signup' %}" method="post">
+                {% csrf_token %}
+                <h3>{{ title }} with</h3>
+                <div class="auth_option">
+                    <!-- Google button -->
+                    <div class="option">
+                        <a href="#">
+                            <img src="{% static 'images/logos/google.png' %}" alt="Google" />
+                            <span>Google</span>
+                        </a>
+                    </div>
+                    <!-- Apple button -->
+                    <div class="option">
+                        <a href="#">
+                            <img src="{% static 'images/logos/apple.png' %}" alt="Apple" />
+                            <span>Apple</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Sign-up option separator -->
+                <p class="separator">
+                    <span>or</span>
+                </p>
+                <!-- Render the sign-up form with Crispy Forms -->
+                {{ form | crispy }}
+                <!-- Sign-up button -->
+                <button type="submit" class="btn-primary">Sign Up</button>
+                <p class="sign_up">
+                    Already have an account? <a href="{% url 'accounts:login' %}">Log in</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

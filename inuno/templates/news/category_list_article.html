@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">{{ category.name }}</h1>
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ article.image_url }}"
+                             class="card-img-top"
+                             alt="{{ article.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.summary }}</p>
+                            <a href="{% url 'news:article_detail' article.slug %}"
+                               class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="text-center">No articles found in this category.</p>
+            {% endfor %}
+        </div>
+        <!-- Pagination -->
+        <div class="pagination-wrapper d-flex justify-content-center">
+            {% if is_paginated %}
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" class="btn btn-light">First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}"
+                       class="btn btn-light">Previous</a>
+                {% endif %}
+                <span class="mx-2">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="btn btn-light">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-light">Last</a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+<h1>{{ article.title }}</h1>
+<img src="{{ article.image_url }}" alt="{{ article.title }}">
+<p>{{ article.content }}</p>
+<p>Published: {{ article.published_date }}</p>
+<p>
+    Category: <a href="{% url 'news:articles_by_category' article.category.slug %}">{{ article.category.name }}</a>
+</p>
+{% if article.sub_category %}
+    <p>
+        SubCategory: <a href="{% url 'news:articles_by_subcategory' article.sub_category.slug %}">{{ article.sub_category.name }}</a>
+    </p>
+{% endif %}

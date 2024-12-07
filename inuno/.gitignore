@@ -1,0 +1,11 @@
+.txt
+venv/
+.pytest_cache
+**__pycache__/
+db.sqlite
+db.sqlite3
+.env
+.coverage
+.vscode
+schema.yml
+*-commands.md

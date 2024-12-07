@@ -1,0 +1,145 @@
+{
+  "categories": [
+    {
+      "name": "Top Stories",
+      "subcategories": [
+        "Breaking News",
+        "Trending Now",
+        "Editor's Picks",
+        "Live Coverage"
+      ]
+    },
+    {
+      "name": "World",
+      "subcategories": [
+        "International Politics",
+        "Global Issues",
+        "Diplomatic Relations",
+        "Conflict Zones"
+      ]
+    },
+    {
+      "name": "Politics",
+      "subcategories": [
+        "Elections",
+        "Policy Analysis",
+        "Government Affairs",
+        "Political Debates"
+      ]
+    },
+    {
+      "name": "Business & Finance",
+      "subcategories": [
+        "Markets",
+        "Investments",
+        "Entrepreneurship",
+        "Cryptocurrency"
+      ]
+    },
+    {
+      "name": "Sports",
+      "subcategories": ["Soccer", "Tennis", "Basketball", "Cricket"]
+    },
+    {
+      "name": "Health & Science",
+      "subcategories": [
+        "Mental Health",
+        "Medical Research",
+        "Fitness Trends",
+        "Disease Prevention"
+      ]
+    },
+    {
+      "name": "Technology",
+      "subcategories": ["AI", "Cybersecurity", "Space Exploration", "Robotics"]
+    },
+    {
+      "name": "Entertainment",
+      "subcategories": ["Movies", "Music", "Celebrity News", "TV Shows"]
+    },
+    {
+      "name": "Climate & Environment",
+      "subcategories": [
+        "Climate Change",
+        "Renewable Energy",
+        "Conservation",
+        "Natural Disasters"
+      ]
+    },
+    {
+      "name": "Travel",
+      "subcategories": [
+        "Destinations",
+        "Adventure Trips",
+        "Eco-Tourism",
+        "Luxury Travel"
+      ]
+    },
+    {
+      "name": "Lifestyle",
+      "subcategories": [
+        "Home Decor",
+        "Hobbies",
+        "Self-Improvement",
+        "Daily Trends"
+      ]
+    },
+    {
+      "name": "Fashion & Beauty",
+      "subcategories": ["Runway Trends", "Makeup", "Hairstyling", "Accessories"]
+    },
+    {
+      "name": "Gaming",
+      "subcategories": [
+        "Esports",
+        "PC Games",
+        "Game Reviews",
+        "Upcoming Releases"
+      ]
+    },
+    {
+      "name": "Arts & Culture",
+      "subcategories": [
+        "Museums",
+        "Performing Arts",
+        "Cultural Trends",
+        "Art Exhibitions"
+      ]
+    },
+    {
+      "name": "Family & Relationships",
+      "subcategories": [
+        "Parenting",
+        "Marriage",
+        "Work-Life Balance",
+        "Friendships"
+      ]
+    },
+    {
+      "name": "Careers & Education",
+      "subcategories": [
+        "Career Advice",
+        "Online Learning",
+        "Higher Education",
+        "Skill Development"
+      ]
+    },
+    {
+      "name": "Outdoors & Camping",
+      "subcategories": [
+        "Hiking",
+        "Camping Gear",
+        "Survival Tips",
+        "National Parks"
+      ]
+    },
+    {
+      "name": "Feeds & Trends",
+      "subcategories": [
+        "Viral Stories",
+        "User-Generated Content",
+        "Opinion Pieces"
+      ]
+    }
+  ]
+}
